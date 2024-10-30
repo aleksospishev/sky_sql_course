@@ -50,7 +50,6 @@ class HHAPIClient(APIBasic):
         """Проверяет, существует ли работодатель_id на hh.ru"""
         url = f"{HHAPIClient.EMPLOYER_URL}/{employer_id}"
         response = requests.get(url)
-        print(employer_id)
         if response.status_code == 200:
             return True
         elif response.status_code == 404:
