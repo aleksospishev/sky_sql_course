@@ -47,7 +47,7 @@ def main() -> bool:
             vacancies_count = db_manager.get_companies_and_vacancies_count()
             for item in vacancies_count:
                 print(fixed_width(f"Employer: {item[0]}", f"Vacancies: {item[1]}", "-", 110))
-            print('=' * 110, '\n')
+            print("=" * 110, "\n")
         elif user_input.lower() == "all":
             all_vacancies = db_manager.get_all_vacancies()
             for item in all_vacancies:
@@ -58,14 +58,12 @@ def main() -> bool:
             print(
                 fixed_width("Средняя зарплата:", f"{round(avg_sal[0][0]) if avg_sal[0][0] else '-Unknown-'}", "_", 110)
             )
-            print('=' * 110, '\n')
+            print("=" * 110, "\n")
 
         elif user_input.lower() == "avg-hi":
             higher_than_avg_vacancies = db_manager.get_vacancies_with_higher_salary()
             for item in higher_than_avg_vacancies:
                 print_vacancy_info(item, "~Unknown~")
-
-
 
         elif user_input.lower() == "word":
             keyword = input("Введите ключевое слово для поиска: ")
@@ -76,10 +74,10 @@ def main() -> bool:
                 print()
             else:
                 print("Ничего не найдено")
-                print('=' * 110, '\n')
+                print("=" * 110, "\n")
         else:
             print("Вы ввели неверное значение.")
-            print('=' * 110, '\n')
+            print("=" * 110, "\n")
 
 
 if __name__ == "__main__":

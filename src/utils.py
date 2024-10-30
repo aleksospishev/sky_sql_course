@@ -1,5 +1,5 @@
 import json
-from configparser import ConfigParser, NoSectionError, NoOptionError, MissingSectionHeaderError
+from configparser import NoSectionError, NoOptionError, MissingSectionHeaderError
 import psycopg2
 import os
 from dotenv import load_dotenv
@@ -174,4 +174,4 @@ def print_vacancy_info(item, unknown: str):
     print(fixed_width("Vacancy:", f"{item[3] if item[3] else unknown}", "-", 110))
     print(fixed_width("Salary from:", f"{item[4] if item[4] else unknown}", "-", 110))
     print(fixed_width("URL:", f"{item[5] if item[5] else unknown}", "-", 110))
-    print("=" * 110, '\n')
+    print("=" * 110, "\n")
