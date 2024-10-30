@@ -140,7 +140,7 @@ def read_db_config() -> dict[str, str]:
 
 
 def read_employers_list(file_path: str) -> list[int]:
-    """Reads and returns list of integers in specified file"""
+    """Считывет список с ID компаний."""
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
@@ -155,7 +155,7 @@ def read_employers_list(file_path: str) -> list[int]:
 
 
 def fixed_width(left_text, right_text, replace_char="-", width=30):
-    """Align a line of text to a given width with custom padding"""
+    """Выравнивает текст по ширине заменяя пробелы."""
     text_length = len(left_text) + len(right_text)
 
     fill_length = width - text_length - 2

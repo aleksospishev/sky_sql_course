@@ -62,7 +62,7 @@ class HHAPIClient(APIBasic):
         return self.data
 
     def get_areas(self):
-        """Возвращает список областей в полученных данных"""
+        """Возвращает список областей"""
         areas = {}
         for vacancy in self.data:
             area = vacancy.get("area")
@@ -72,7 +72,7 @@ class HHAPIClient(APIBasic):
         return areas
 
     def get_employers(self):
-        """Возвращает список работодателей в полученных данных"""
+        """Возвращает список работодателей"""
         employers = {}
         for vacancy in self.data:
             employer = vacancy.get("employer")
@@ -87,7 +87,7 @@ class HHAPIClient(APIBasic):
         return employers
 
     def get_vacancies(self):
-        """Возвращает список работодателей в полученных данных"""
+        """Возвращает список вакансий"""
         vacancies_list = []
         for vacancy in self.data:
             salary = vacancy.get("salary", {})
