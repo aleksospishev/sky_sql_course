@@ -1,15 +1,9 @@
-from src.DBManager import DBManager
-from src.api_connect import HHAPIClient
-from src.utils import (
-    read_employers_list,
-    read_db_config,
-    create_database,
-    save_to_database,
-    fixed_width,
-    print_vacancy_info,
-)
-
 import os
+
+from src.api_connect import HHAPIClient
+from src.DBManager import DBManager
+from src.utils import (create_database, fixed_width, print_vacancy_info, read_db_config, read_employers_list,
+                       save_to_database)
 
 commands = [
     ("Company", "Получить список всех компаний и количество вакансий у каждой компании."),

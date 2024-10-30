@@ -1,7 +1,8 @@
 import json
-from configparser import NoSectionError, NoOptionError, MissingSectionHeaderError
-import psycopg2
 import os
+from configparser import MissingSectionHeaderError, NoOptionError, NoSectionError
+
+import psycopg2
 from dotenv import load_dotenv
 
 load_dotenv()

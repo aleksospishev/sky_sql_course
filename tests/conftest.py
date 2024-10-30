@@ -1,8 +1,8 @@
 import json
+from unittest.mock import MagicMock
 
 import pytest
 import requests
-from unittest.mock import MagicMock
 
 from src.api_connect import HHAPIClient
 

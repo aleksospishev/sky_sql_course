@@ -1,7 +1,6 @@
 import json
 import os.path
 
-
 from src.utils import read_employers_list
 
 
